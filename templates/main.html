@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  <head>
+
+
+
+    <link rel="stylesheet" href='../static/style.css'/>
+
+  </head>
+<style>
+table ,td, tr {
+        width: 10%;
+        text-align: center;
+        }
+body {
+    text-align: center;
+    }
+
+</style>
+
+    <body>
+    <h1> <img style="height: 100px" src="/static/img/BK.png"> </h1>
+      <h1>Pika RoBot </h1>
+      <hr>
+      <h2> Streaming PiCam </h2>
+      <h3><img src="{{ url_for('video_feed') }}" width="60%"></h3>
+
+    <h2> Controller </h2>
+        <table  style="width:100%; max-width:600px; height:250px; margin: auto">
+<!-- forward - CamPan -->
+
+<tr>
+        <td>
+        </td>
+                <td>
+                
+                    <form action="/2" method="POST">
+                        <input type="image" name="direction" src="/static/img/forward.svg" value="forward" style="float: auto; width:60%">
+                        </br>
+                    </form>
+                    
+                </td>
+        <td>
+        </td>
+<!-- CamPan -->
+
+        <td>
+          <form action="/13" method="POST">
+                          <input type="image" name="angle" src="/static/img/left.svg" value="CamPan_0" style="float: auto; width:60%">
+                          </br>
+          </form>
+        </td>
+
+        <td>
+        
+          <form action="/14" method="POST">
+                          <input type="image" name="angle" src="/static/img/stop.svg" value="CamPan_90" style="float: auto; width:60%">
+                          </br>
+          </form>
+        </td>
+
+        <td>
+          <form action="/15" method="POST">
+                          <input type="image" name="angle" src="/static/img/right.svg" value="CamPan_180" style="float: auto; width:60%">
+                          </br>
+                      </form>
+        </td>
+
+</tr>
+<!-- left,stop,right - CamTilt -->
+<tr>
+        <td>
+                    <form action="/1" method="POST">
+                        <input type="image" name="direction" src="/static/img/left.svg" value="left" style="float:auto; width:60% ;">
+                        </br>
+                    </form>
+        </td>
+
+        <td>
+                    <form action="/5" method="POST">
+                        <input type="image" name="direction" src="/static/img/stop.svg" value="stop" style="margin-left:auto; width:60%;">
+                        </br>
+                    </form>
+        </td>
+
+        <td>
+                    <form action="/3" method="POST">
+                        <input type="image" name="direction" src="/static/img/right.svg" value="right" style="float:auto; width:60%;">
+                        </br>
+                    </form>
+        </td>
+<!--CamTilt-->
+
+        <td>
+          <form action="/16" method="POST">
+                          <input type="image" name="angle" src="/static/img/handleft.svg" value="CamTilt_0" style="float: auto; width:60%">
+                          </br>
+                      </form>
+        </td>
+        <td>
+          <form action="/17" method="POST">
+                          <input type="image" name="angle" src="/static/img/handstop.svg" value="CamTilt_90" style="float: auto; width:60%">
+                          </br>
+                      </form>
+        </td>
+        <td>
+          <form action="/18" method="POST">
+                          <input type="image" name="angle" src="/static/img/handright.svg" value="CamTilt_180" style="float: auto; width:60%">
+                          </br>
+                      </form>
+        </td>
+
+</tr>
+<!-- reverse -->
+<tr>
+        <td>
+        </td>
+        <td>
+                    <form action="/4" method="POST">
+                        <input type="image" name="direction" src="/static/img/reverse.svg" value="reverse" style=" float: auto; width:60%;">
+                        </br>
+                    </form>
+                </td>
+
+</tr>
+
+
+<!-- handup -->
+
+<tr>
+  <td>
+          <form action="/21" method="POST">
+                        <input type="image" name="speed" src="/static/img/Stop.png" value="Stop" style=" float: auto; width:60%;">
+                        </br>
+                    </form>
+  </td>
+          
+    <td>
+     <form action="/22" method="POST">
+                        <input type="image" name="speed" src="/static/img/Slow.jpg" value="Slow" style=" float: auto; width:60%;">
+                        </br>
+                    </form>
+  </td>
+  
+  <td>
+  <form action="/23" method="POST">
+                        <input type="image" name="speed" src="/static/img/Fast.jpg" value="Fast" style=" float: auto; width:60%;">
+                        </br>
+                    </form>
+  </td>
+  <td>
+    <form action="/8" method="POST">
+        <input type="image" name="direction" src="/static/img/handup.svg" value="handup" style=" margin-left:auto; width:60%;">
+        </br>
+    </form>
+  </td>
+
+</tr>
+
+<!-- handleft,handstop,handright -->
+<tr>
+  <td>
+  </td>
+  <td>
+    <form action="/19" method="POST">
+      <input type="image" name="direction" src="/static/img/handleft.svg" value="handleft_fast" style="margin-left:auto; width:70%;">
+      </br>
+    </form>
+  </td>
+<td>
+  <form action="/10" method="POST">
+    <input type="image" name="direction" src="/static/img/handleft.svg" value="handleft" style="margin-left:auto; width:60%;">
+    </br>
+  </form>
+</td>
+<td>
+  <form action="/12" method="POST">
+    <input type="image" name="direction" src="/static/img/handstop.svg" value="handstop" style="margin-left:auto; width:60%;">
+    </br>
+  </form>
+</td>
+<td>
+  <form action="/11" method="POST">
+    <input type="image" name="direction" src="/static/img/handright.svg" value="handright" style="margin-left:auto; width:60%;">
+    </br>
+  </form>
+</td>
+<td>
+  <form action="/20" method="POST">
+    <input type="image" name="direction" src="/static/img/handright.svg" value="handright_fast" style="margin-left:auto; width:70%;">
+    </br>
+  </form>
+</td>
+</tr>
+
+<!-- handown -->
+<tr>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+    <form action="/9" method="POST">
+      <input type="image" name="direction" src="/static/img/handdown.svg" value="handdown" style="margin-left:auto; width:60%;">
+      </br>
+    </form>
+  </td>
+  <td>
+  </td>
+
+</tr>
+
+<!-- handin, handout -->
+<tr>
+  <td>
+  </td>
+  <td>
+  </td>
+                    <td>
+                        <form action="/6" method="POST">
+                            <input type="image" name="direction" src="/static/img/handin.svg" value="handin" style=" margin-left:auto; width:60%;">
+                            </br>
+                        </form>
+                    </td>
+              <td>
+              </td>
+                    <td>
+                        <form action="/7" method="POST">
+                            <input type="image" name="direction" src="/static/img/handout.svg" value="handout" style="margin-left:auto; width:60%;">
+                            </br>
+                        </form>
+                    </td>
+</tr>
+
+        </table>
+        <hr>
+        <h3> Object_detection ==> <a href="/object_detection" class="button">OBJECT DETECTION</a></h3>
+        <hr>
+        <h3> Target_detection ==> <a href="/target_detection" class="button">TARGET DETECTION</a></h3>
+        <hr>
+        <h3> QR_detection ==> <a href="/QRcode" class="button">QR DETECTION</a></h3>
+        <hr>
+        <h3> Color_tracking ==> <a href="/color_tracking" class="button">COLOR TRACKING</a></h3>
+  </body>
+</html>
