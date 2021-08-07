@@ -162,7 +162,7 @@ if __name__ == '__main__':
     ap.add_argument("-o", "--port", type=int, required=True,
         help="ephemeral port number of the server (1024 to 65535)")
     ap.add_argument("-f", "--frame-count", type=int, default=32,
-        help="# of frames used to construct the background model")
+        help="# of frames used to construct the background model 11")
     args = vars(ap.parse_args())
 
     # start a thread that will perform motion detection
