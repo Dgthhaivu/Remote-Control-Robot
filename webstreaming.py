@@ -178,5 +178,4 @@ if __name__ == '__main__':
 # release the video stream pointer
 vs.stop()
 
-
-#aloha
+#hello
